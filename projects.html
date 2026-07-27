@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Projects — Anis-Ul-Islam Rafid</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="theme.css" />
+<script>(function(){try{var k='rafid-portfolio-theme',t=localStorage.getItem(k);if(t!=='dark'&&t!=='light'){t=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}document.documentElement.dataset.theme=t;}catch(e){}})();</script>
+</helmet>
+
+<div style="position:relative; width:100%; min-height:100vh; background:var(--surface);">
+  <dc-import name="Nav" hint-size="100%,0px"></dc-import>
+
+  <header data-screen-label="Projects header" style="position:relative; padding:var(--head-pt) var(--pad) 68px; overflow:hidden; border-bottom:1px solid var(--outline);">
+    <div style="position:absolute; inset:0; pointer-events:none; background-image:radial-gradient(var(--dot) 1px, transparent 1px); background-size:34px 34px; mask-image:linear-gradient(180deg, oklch(0 0 0 / 0.55), transparent 76%); -webkit-mask-image:linear-gradient(180deg, oklch(0 0 0 / 0.55), transparent 76%);"></div>
+    <div style="position:relative; max-width:var(--max); margin:0 auto;">
+      <div style="font-family:'JetBrains Mono',monospace; font-size:11.5px; letter-spacing:0.18em; text-transform:uppercase; color:var(--primary); margin-bottom:26px;">03 / Projects</div>
+      <h1 style="font-size:clamp(38px,6.2vw,86px); line-height:1.0; font-weight:700; letter-spacing:-0.045em; max-width:14ch;">Things I shipped.</h1>
+      <p style="font-size:clamp(16px,1.4vw,19px); line-height:1.6; color:var(--on-surface-var); max-width:620px; margin-top:28px;">Products first — the work that reaches real users daily. Open-source repositories follow.</p>
+      <div style="height:2px; margin-top:44px; background:linear-gradient(90deg, var(--primary), transparent); transform-origin:left; animation:ruleIn 1s cubic-bezier(.2,0,0,1) both;"></div>
+    </div>
+  </header>
+
+  <section data-screen-label="Case studies" style="padding:var(--sec-py) var(--pad) 0;">
+    <div style="max-width:var(--max); margin:0 auto; display:grid; gap:20px;">
+      <sc-for list="{{ caseStudies }}" as="cs" hint-placeholder-count="5">
+        <div data-reveal="1" data-tilt="1" style="position:relative; display:grid; grid-template-columns:var(--split); gap:clamp(26px,4vw,60px); padding:clamp(28px,3.2vw,46px); border-radius:var(--r-xl); border:1px solid var(--outline); background:var(--surface-1); box-shadow:var(--shadow-1); overflow:hidden; transition:box-shadow .4s ease, border-color .4s ease, transform .4s cubic-bezier(.2,0,0,1);" style-hover="box-shadow:var(--shadow-3); border-color:var(--outline-strong)">
+          <div style="position:relative; z-index:1;">
+            <div style="display:flex; align-items:center; gap:12px; margin-bottom:20px;">
+              <span style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.12em; text-transform:uppercase; padding:6px 12px; border-radius:8px; background:var(--a-container); color:var(--accent);">{{ cs.kind }}</span>
+              <span style="font-family:'JetBrains Mono',monospace; font-size:11.5px; color:var(--on-surface-dim);">{{ cs.org }}</span>
+            </div>
+            <h2 style="font-size:clamp(25px,2.8vw,38px); font-weight:600; letter-spacing:-0.035em; line-height:1.12;">{{ cs.name }}</h2>
+            <p style="font-size:16px; line-height:1.62; color:var(--on-surface-var); margin-top:18px; max-width:540px;">{{ cs.blurb }}</p>
+            <div style="display:flex; flex-wrap:wrap; gap:7px; margin-top:26px;">
+              <sc-for list="{{ cs.tech }}" as="t" hint-placeholder-count="4">
+                <span style="padding:6px 12px; border-radius:9px; background:var(--surface-2); border:1px solid var(--outline); font-family:'JetBrains Mono',monospace; font-size:11.5px; color:var(--on-surface-var);">{{ t }}</span>
+              </sc-for>
+            </div>
+          </div>
+          <div style="position:relative; z-index:1; display:grid; gap:1px; align-content:start; background:var(--outline); border:1px solid var(--outline); border-radius:var(--r-md); overflow:hidden;">
+            <sc-for list="{{ cs.highlights }}" as="h" hint-placeholder-count="3">
+              <div style="padding:19px 22px; background:var(--surface);">
+                <div style="font-family:'Space Grotesk',sans-serif; font-size:23px; font-weight:700; letter-spacing:-0.025em; color:var(--primary);">{{ h.stat }}</div>
+                <div style="font-size:13.5px; line-height:1.5; color:var(--on-surface-var); margin-top:6px;">{{ h.label }}</div>
+              </div>
+            </sc-for>
+            <sc-if value="{{ cs.link }}" hint-placeholder-val="{{ false }}">
+              <a href="{{ cs.link }}" target="_blank" rel="noopener" style="display:flex; align-items:center; justify-content:space-between; gap:12px; padding:19px 22px; background:var(--surface); font-size:13.5px; font-weight:600;">
+                {{ cs.linkLabel }}
+                <span style="font-family:'JetBrains Mono',monospace; font-size:15px;">↗</span>
+              </a>
+            </sc-if>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <section data-screen-label="Open source" style="padding:var(--sec-py) var(--pad) 0;">
+    <div style="max-width:var(--max); margin:0 auto;">
+      <div data-reveal="1" style="display:flex; align-items:center; gap:14px; margin-bottom:40px;">
+        <span style="font-family:'JetBrains Mono',monospace; font-size:11.5px; letter-spacing:0.16em; text-transform:uppercase; color:var(--primary);">Open source</span>
+        <span style="flex:1; height:1px; background:var(--outline);"></span>
+      </div>
+      <div style="display:grid; grid-template-columns:var(--cols3); gap:20px;">
+        <sc-for list="{{ repos }}" as="r" hint-placeholder-count="6">
+          <a data-reveal="1" href="{{ r.link }}" target="_blank" rel="noopener" style="display:grid; align-content:start; gap:14px; padding:30px; border-radius:var(--r-lg); border:1px solid var(--outline); background:var(--surface-1); color:var(--on-surface); transition:box-shadow .35s ease, transform .35s cubic-bezier(.2,0,0,1), border-color .35s ease;" style-hover="box-shadow:var(--shadow-2); transform:translateY(-4px); border-color:var(--outline-strong); color:var(--on-surface)">
+            <div style="display:flex; align-items:center; justify-content:space-between; gap:12px;">
+              <span style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color:var(--primary);">{{ r.lang }}</span>
+              <span style="font-family:'JetBrains Mono',monospace; font-size:11.5px; color:var(--on-surface-dim);">{{ r.stars }}</span>
+            </div>
+            <h3 style="font-size:19px; font-weight:600; letter-spacing:-0.022em; line-height:1.25;">{{ r.name }}</h3>
+            <p style="font-size:14.5px; line-height:1.58; color:var(--on-surface-var);">{{ r.blurb }}</p>
+            <span style="font-family:'JetBrains Mono',monospace; font-size:11.5px; color:var(--primary); margin-top:2px;">View repository ↗</span>
+          </a>
+        </sc-for>
+      </div>
+      <div data-reveal="1" style="margin-top:30px; display:flex; justify-content:center;">
+        <a href="https://github.com/anisrfd" target="_blank" rel="noopener" style="display:inline-flex; align-items:center; gap:10px; padding:15px 25px; border-radius:999px; border:1px solid var(--outline-strong); font-size:14.5px; font-weight:600; color:var(--on-surface);" style-hover="background:var(--surface-1); color:var(--on-surface)">All 30 repositories on GitHub ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <footer style="margin-top:calc(var(--sec-py) * 0.55); padding:22px var(--pad) 26px; border-top:1px solid var(--outline); background:var(--surface-1);">
+    <div style="max-width:var(--max); margin:0 auto; display:flex; flex-wrap:wrap; gap:20px; align-items:center; justify-content:space-between;">
+      <span style="font-size:13.5px; color:var(--on-surface-var);">© 2026 Anis-Ul-Islam Rafid</span>
+      <a href="contact.html" style="font-size:13.5px; font-weight:600;">Get in touch →</a>
+    </div>
+  </footer>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;accent&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;cyan&quot;,&quot;violet&quot;,&quot;amber&quot;,&quot;lime&quot;],&quot;default&quot;:&quot;cyan&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Theme&quot;},&quot;themeMode&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;system&quot;,&quot;dark&quot;,&quot;light&quot;],&quot;default&quot;:&quot;system&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Theme&quot;}}">
+class Component extends DCLogic {
+  async componentDidMount(){
+    this.S = await import('./site.js');
+    this.S.initPage({ accent: this.props.accent, themeMode: this.props.themeMode });
+  }
+  componentDidUpdate(){
+    if (!this.S) return;
+    this.S.applyAccent(this.props.accent);
+    this.S.initReveal();
+    this.S.initTilt();
+  }
+  renderVals(){
+    return {
+      caseStudies: [
+        { kind:'Browser', org:'Kahf Yazılım', name:'Kahf Browser', blurb:'A privacy-first browser with a curated new-tab experience. I own the shortcut system, multi-engine search with autocomplete, enforced safe search, the in-house ad surface, the desktop build, and an AI chat written from scratch.', tech:['C++','TypeScript','Electron','Chromium'], highlights:[{stat:'4 engines',label:'search providers with unified autocomplete and forced safe search'},{stat:'Desktop',label:'shipped the cross-platform desktop version'},{stat:'AI chat',label:'built from scratch inside the browser'}] },
+        { kind:'Extension', org:'Kahf Yazılım', name:'SafeGaze', blurb:'Real-time content filtering in the browser: image and video blur, Shorts and Reels blocking, ad and YouTube-ad interception. I redesigned the interface and rebuilt the vision pipeline so it runs on low-end machines.', tech:['Computer Vision','TypeScript','ONNX','Python'], highlights:[{stat:'3× faster',label:'after re-architecting the blur execution path'},{stat:'4 modes',label:'image blur filters plus video blur for social platforms'},{stat:'On-device',label:'compact custom model trained for local inference'}] },
+        { kind:'Platform', org:'UDPlatforms', name:'Rakizo — no-code app builder', blurb:'A platform letting non-programmers assemble mobile and web apps. Built from an empty repository over five years: microservices, event-driven operations, multi-tenant data, payments, chat, and an LLM that generates platform code from prompts.', tech:['Python','Java','Flutter','GCP','Pub/Sub','Stripe'], highlights:[{stat:'0 → live',label:'from first commit to a production multi-tenant platform'},{stat:'Auto gateway',label:'OpenAPI specs generated and wired in at deploy time'},{stat:'DLQ',label:'dead-letter processing for unacknowledged events'}] },
+        { kind:'Computer Vision', org:'Pridesys IT', name:'PrideVision — CCTV face recognition', blurb:'Large-scale face detection and recognition from CCTV feeds, extended into a full attendance and workplace-monitoring system for the garment sector. I designed the system and led the team.', tech:['TensorFlow','Dlib','OpenPose','Jetson TX2'], highlights:[{stat:'92%',label:'recognition accuracy on a large local dataset'},{stat:'Anti-spoof',label:'liveness detection layered on top'},{stat:'UI retrain',label:'upload a dataset and retrain from the dashboard'}], link:'https://drive.google.com/file/d/1rY3BwFtYLEJDSdApJTAw0HSiyjJdKY2j/view', linkLabel:'Watch the demo' },
+        { kind:'Health AI', org:'Think-Bricks', name:'Smart Retina', blurb:'Diabetic retinopathy detection from fundus retinal images, deployed as a web app and clinical tool at BNSB Eye Hospital, with a portal connecting doctors, patients and providers.', tech:['Keras','Django','SageMaker','DynamoDB'], highlights:[{stat:'>90%',label:'accuracy, verified on local patient retinal images'},{stat:'1st prize',label:'ICT COVID-19 Call for Nation ’20, health category'},{stat:'Deployed',label:'live at BNSB Eye Hospital'}], link:'https://youtu.be/tQ8fvMqDhek', linkLabel:'Watch the demo' }
+      ],
+      repos: [
+        { lang:'Python', stars:'★ 12', name:'Driver-Drowsiness-Detection', blurb:'The codebase behind my published real-time drowsiness detection work — face landmarks, eye-state classification, alerting.', link:'https://github.com/anisrfd/Driver-Drowsiness-Detection' },
+        { lang:'Python', stars:'★ 5', name:'Retinal-Image-and-Vessel-Detection', blurb:'Vessel segmentation and preprocessing utilities for fundus images, from the diabetic retinopathy research.', link:'https://github.com/anisrfd/Retinal-Image-and-Vessel-Detection' },
+        { lang:'Python', stars:'Contributor', name:'Deep-Object-Search-With-Hash', blurb:'Object search over deep features from pre-trained detectors using hashing. My first open-source contribution, with one collaborator.', link:'https://github.com/munnafaisal/Deep-Object-Search-With-Hash' },
+        { lang:'Python', stars:'Open source', name:'Halt Violence Against Women', blurb:'Detects abnormal behaviour in real time by reading emotion and body motion together, then raises an alarm. Keras, OpenCV, NumPy.', link:'https://github.com/anisrfd?tab=repositories&q=halt' },
+        { lang:'Jupyter', stars:'★ 4', name:'Economic Status & Restaurant Prediction', blurb:'Infers a customer’s economic bracket and likely restaurant from attribute data — KNN classifier, pandas, scikit-learn metrics.', link:'https://github.com/anisrfd/Prediction_Project' },
+        { lang:'MATLAB', stars:'★ 4', name:'MATLAB_Projects', blurb:'Signal and image processing coursework and experiments from the pattern-recognition years.', link:'https://github.com/anisrfd/MATLAB_Projects' },
+        { lang:'Python · JS', stars:'Voice + Vision AI', name:'parlor', blurb:'Real-time Bengali voice-and-vision AI in the browser: talk in Bangla, show it your camera, it answers in a natural Bengali neural voice. Web Speech API + Gemma 3 + edge-tts behind a FastAPI/Node pipeline with barge-in and concurrent TTS.', link:'https://github.com/anisrfd/parlor' },
+        { lang:'Jupyter', stars:'★ 2 · NLP', name:'IMDB-movie-review-classification', blurb:'Movie-review sentiment classification with TensorFlow Hub — pre-trained text embeddings feeding a neural classifier that separates positive from negative IMDB reviews.', link:'https://github.com/anisrfd/IMDB-movie-review-classification' },
+        { lang:'Jupyter', stars:'Health AI', name:'AI-on-Medical-Diagnosis', blurb:'Deep learning on medical imaging: brain-tumor auto-segmentation for MRI and chest X-ray diagnosis — two end-to-end diagnostic pipelines in one repository.', link:'https://github.com/anisrfd/AI-on-Medical-Diagnosis' },
+        { lang:'Python', stars:'Django REST', name:'lunch_app', blurb:'Office lunch-voting API in Django: restaurants upload daily menus, employees vote, and a winner is computed — with a no-3-consecutive-wins rule, token auth, tests and Docker.', link:'https://github.com/anisrfd/lunch_app' }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

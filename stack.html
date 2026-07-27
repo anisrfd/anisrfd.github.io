@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Stack &amp; Honours — Anis-Ul-Islam Rafid</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="theme.css" />
+<script>(function(){try{var k='rafid-portfolio-theme',t=localStorage.getItem(k);if(t!=='dark'&&t!=='light'){t=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}document.documentElement.dataset.theme=t;}catch(e){}})();</script>
+</helmet>
+
+<div style="position:relative; width:100%; min-height:100vh; background:var(--surface);">
+  <dc-import name="Nav" hint-size="100%,0px"></dc-import>
+
+  <header data-screen-label="Stack header" style="position:relative; padding:var(--head-pt) var(--pad) 68px; overflow:hidden; border-bottom:1px solid var(--outline);">
+    <div style="position:absolute; inset:0; pointer-events:none; background-image:radial-gradient(var(--dot) 1px, transparent 1px); background-size:34px 34px; mask-image:linear-gradient(180deg, oklch(0 0 0 / 0.55), transparent 76%); -webkit-mask-image:linear-gradient(180deg, oklch(0 0 0 / 0.55), transparent 76%);"></div>
+    <div style="position:relative; max-width:var(--max); margin:0 auto;">
+      <div style="font-family:'JetBrains Mono',monospace; font-size:11.5px; letter-spacing:0.18em; text-transform:uppercase; color:var(--primary); margin-bottom:26px;">05 / Stack &amp; Honours</div>
+      <h1 style="font-size:clamp(38px,6.2vw,86px); line-height:1.0; font-weight:700; letter-spacing:-0.045em; max-width:14ch;">Tools and wins.</h1>
+      <p style="font-size:clamp(16px,1.4vw,19px); line-height:1.6; color:var(--on-surface-var); max-width:620px; margin-top:28px;">What I reach for day to day, and the competitions that went well.</p>
+      <div style="height:2px; margin-top:44px; background:linear-gradient(90deg, var(--primary), transparent); transform-origin:left; animation:ruleIn 1s cubic-bezier(.2,0,0,1) both;"></div>
+    </div>
+  </header>
+
+  <section data-screen-label="Skills" style="padding:var(--sec-py) var(--pad) 0;">
+    <div style="max-width:var(--max); margin:0 auto;">
+      <div data-reveal="1" style="display:flex; align-items:center; gap:14px; margin-bottom:40px;">
+        <span style="font-family:'JetBrains Mono',monospace; font-size:11.5px; letter-spacing:0.16em; text-transform:uppercase; color:var(--primary);">Technical stack</span>
+        <span style="flex:1; height:1px; background:var(--outline);"></span>
+      </div>
+      <div style="display:grid; grid-template-columns:var(--cols3); gap:20px;">
+        <sc-for list="{{ skillGroups }}" as="g" hint-placeholder-count="6">
+          <div data-reveal="1" style="padding:30px; border-radius:var(--r-lg); border:1px solid var(--outline); background:var(--surface-1);">
+            <h3 style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:var(--primary); margin-bottom:20px;">{{ g.label }}</h3>
+            <div style="display:flex; flex-wrap:wrap; gap:8px;">
+              <sc-for list="{{ g.items }}" as="s" hint-placeholder-count="6">
+                <span style="padding:8px 14px; border-radius:999px; background:var(--surface-2); border:1px solid var(--outline); font-size:13px; color:var(--on-surface);">{{ s }}</span>
+              </sc-for>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Honours" style="padding:var(--sec-py) var(--pad) 0;">
+    <div style="max-width:var(--max); margin:0 auto;">
+      <div>
+        <div data-reveal="1" style="display:flex; align-items:center; gap:14px; margin-bottom:36px;">
+          <span style="font-family:'JetBrains Mono',monospace; font-size:11.5px; letter-spacing:0.16em; text-transform:uppercase; color:var(--primary);">Honours</span>
+          <span style="flex:1; height:1px; background:var(--outline);"></span>
+        </div>
+        <div style="display:grid; gap:1px; background:var(--outline); border:1px solid var(--outline); border-radius:var(--r-lg); overflow:hidden;">
+          <sc-for list="{{ awards }}" as="a" hint-placeholder-count="6">
+            <div data-reveal="1" style="display:grid; grid-template-columns:56px 1fr; gap:16px; align-items:baseline; padding:22px 24px; background:var(--surface-1);">
+              <span style="font-family:'JetBrains Mono',monospace; font-size:11.5px; color:var(--accent);">{{ a.year }}</span>
+              <span>
+                <span style="display:block; font-size:15.5px; font-weight:600; line-height:1.4;">{{ a.title }}</span>
+                <span style="display:block; font-size:13.5px; color:var(--on-surface-var); margin-top:5px;">{{ a.event }}</span>
+              </span>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer style="margin-top:calc(var(--sec-py) * 0.55); padding:22px var(--pad) 26px; border-top:1px solid var(--outline); background:var(--surface-1);">
+    <div style="max-width:var(--max); margin:0 auto; display:flex; flex-wrap:wrap; gap:20px; align-items:center; justify-content:space-between;">
+      <span style="font-size:13.5px; color:var(--on-surface-var);">© 2026 Anis-Ul-Islam Rafid</span>
+      <a href="contact.html" style="font-size:13.5px; font-weight:600;">Get in touch →</a>
+    </div>
+  </footer>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;accent&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;cyan&quot;,&quot;violet&quot;,&quot;amber&quot;,&quot;lime&quot;],&quot;default&quot;:&quot;cyan&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Theme&quot;},&quot;themeMode&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;system&quot;,&quot;dark&quot;,&quot;light&quot;],&quot;default&quot;:&quot;system&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Theme&quot;}}">
+class Component extends DCLogic {
+  async componentDidMount(){
+    this.S = await import('./site.js');
+    this.S.initPage({ accent: this.props.accent, themeMode: this.props.themeMode });
+  }
+  componentDidUpdate(){
+    if (!this.S) return;
+    this.S.applyAccent(this.props.accent);
+    this.S.initReveal();
+    this.S.initTilt();
+  }
+  renderVals(){
+    return {
+      skillGroups: [
+        { label:'Languages', items:['Python','Java','JavaScript','TypeScript','C++','Dart / Flutter','Bash'] },
+        { label:'Frameworks', items:['Flask','Django','FastAPI','Streamlit','Micronaut','Vue.js','Electron'] },
+        { label:'ML & vision', items:['PyTorch','TensorFlow','Keras','OpenCV','Dlib','OpenPose','scikit-learn','Hugging Face','LangChain','pandas','NumPy','matplotlib'] },
+        { label:'Cloud & infra', items:['Google Cloud','AWS','Azure','Docker','Kubernetes','Cloudflare','CI/CD'] },
+        { label:'Data', items:['MySQL','NoSQL','Firestore','Oracle','Redis','Hive','Impala','Hue'] },
+        { label:'Practice', items:['DDD','TDD','Microservices','Event-driven','Agile','Clean code','SOLID'] }
+      ],
+      awards: [
+        { year:'2020', title:'1st prize — ICT COVID-19 Call for Nation, health category', event:'For Smart Retina, with the Think-Bricks team' },
+        { year:'2019', title:'2nd runner-up, Software category', event:'AUST MindSparks 2019' },
+        { year:'2018', title:'3rd position', event:'BUET Hackathon 2018' },
+        { year:'2017', title:'1st runner-up, Software category', event:'AUST INNOVENTURE 2017' },
+        { year:'2017', title:'People’s Choice Award winner', event:'DIU Hackathon 2017' }
+      ],
+      teaching: [
+        { period:'Dec 2024 — Present', role:'Python Programming Instructor', org:'Human Development Network Bangladesh', blurb:'Leading the Python Bootcamp 10B1 cohort — curriculum, live sessions and code review for students across the country.' },
+        { period:'Apr 2022 — Jul 2022', role:'Programming Instructor', org:'KHEA Academy, Epyllion Group', blurb:'Taught Python on a free online platform reaching students, professionals and experts nationwide.' },
+        { period:'Feb 2020 — Present', role:'IT Secretary', org:'National Ideal College Alumni Association', blurb:'Running the association’s digital presence and internal systems on a volunteer basis.' }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

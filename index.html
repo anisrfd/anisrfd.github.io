@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Anis-Ul-Islam Rafid — Software Engineer &amp; AI Researcher</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="theme.css" />
+<script>(function(){try{var k='rafid-portfolio-theme',t=localStorage.getItem(k);if(t!=='dark'&&t!=='light'){t=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}document.documentElement.dataset.theme=t;}catch(e){}})();</script>
+</helmet>
+
+<div style="position:relative; width:100%; min-height:100vh; background:var(--surface);">
+  <dc-import name="Nav" hint-size="100%,0px"></dc-import>
+
+  <section data-screen-label="Home hero" style="position:relative; min-height:100svh; display:flex; align-items:center; padding:calc(var(--head-pt) - 24px) var(--pad) 84px; overflow:hidden;">
+    <div id="heroCanvasWrap" style="position:absolute; inset:0; z-index:0; pointer-events:none;"></div>
+    <div style="position:absolute; inset:0; z-index:1; pointer-events:none; background:radial-gradient(130% 90% at 50% -10%, transparent 38%, var(--surface) 96%);"></div>
+
+    <div style="position:relative; z-index:2; width:100%; max-width:var(--max); margin:0 auto; display:grid; grid-template-columns:var(--split); gap:clamp(40px,5vw,84px); align-items:center;">
+      <div>
+        <div style="display:inline-flex; align-items:center; gap:10px; padding:7px 16px 7px 11px; border-radius:999px; border:1px solid var(--outline); background:var(--glass); backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px); font-size:12.5px; font-weight:500; color:var(--on-surface-var); margin-bottom:30px;">
+          <span style="position:relative; display:grid; place-items:center; width:8px; height:8px;">
+            <span style="position:absolute; inset:0; border-radius:999px; background:var(--accent); animation:pulseRing 2.6s ease-out infinite;"></span>
+            <span style="width:8px; height:8px; border-radius:999px; background:var(--accent);"></span>
+          </span>
+          Software Engineer at Kahf Yazılım A.Ş · Dhaka
+        </div>
+
+        <h1 style="font-size:clamp(44px,7.4vw,104px); line-height:0.93; font-weight:700; letter-spacing:-0.048em;">
+          Anis-Ul-Islam
+          <span style="display:block; color:var(--primary);">Rafid</span>
+        </h1>
+
+        <div style="margin:26px 0 22px;">
+          <span style="font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:0.14em; text-transform:uppercase; color:var(--on-surface-var); line-height:2;">Software Engineer · AI Researcher · Machine Learning Engineer · AI Native Applications</span>
+        </div>
+
+        <p style="font-size:clamp(16.5px,1.4vw,19.5px); line-height:1.6; color:var(--on-surface-var); max-width:560px;">
+          I teach machines to see, listen and reason — then ship them into products people trust every day. Seven years of production software, three peer-reviewed papers, and one conviction: technology should respect the person using it.
+        </p>
+
+        <div style="display:flex; flex-wrap:wrap; gap:12px; margin-top:36px;">
+          <a href="projects.html" style="display:inline-flex; align-items:center; gap:12px; padding:16px 27px; border-radius:999px; background:var(--primary); color:var(--on-primary); font-weight:700; font-size:15px; box-shadow:var(--shadow-2);" style-hover="background:var(--primary-hover); color:var(--on-primary); transform:translateY(-2px)">
+            See the work
+          </a>
+          <a href="uploads/anis_rafid_resume.pdf" download="Anis-Ul-Islam-Rafid-Resume.pdf" style="display:inline-flex; align-items:center; gap:10px; padding:16px 27px; border-radius:999px; border:1px solid var(--outline-strong); color:var(--on-surface); font-weight:600; font-size:15px; background:var(--glass); backdrop-filter:blur(14px);" style-hover="background:var(--surface-2); color:var(--on-surface)">
+            Resume ↓
+          </a>
+        </div>
+      </div>
+
+      <div data-reveal="1" style="justify-self:center; width:100%; max-width:440px; display:grid; gap:32px;">
+       <div style="position:relative;">
+        <div style="position:absolute; inset:-14px; border-radius:calc(var(--r-xl) + 14px); border:1px solid var(--hair); pointer-events:none;"></div>
+        <div style="position:relative; border-radius:var(--r-xl); overflow:hidden; border:1px solid var(--outline); box-shadow:var(--shadow-3); background:var(--surface-2); animation:floaty 8s ease-in-out infinite;">
+          <img src="uploads/photo-1784916106484.jpg" alt="Portrait of Anis-Ul-Islam Rafid" style="display:block; width:100%; aspect-ratio:4/5; object-fit:cover; object-position:50% 22%;" />
+          <div style="position:absolute; inset:0; pointer-events:none; background:linear-gradient(180deg, transparent 42%, oklch(0.14 0.014 245 / 0.86) 100%);"></div>
+          <div style="position:absolute; inset:auto 0 0 0; padding:26px; color:oklch(0.98 0 0);">
+            <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; opacity:0.75;">Dhaka · GMT+6</div>
+            <div style="font-family:'Space Grotesk',sans-serif; font-size:19px; font-weight:600; margin-top:6px; letter-spacing:-0.02em;">Open to remote &amp; hybrid roles</div>
+          </div>
+        </div>
+        <div style="position:absolute; top:-18px; left:-20px; padding:11px 17px; border-radius:999px; background:var(--surface); border:1px solid var(--outline); box-shadow:var(--shadow-2); font-family:'JetBrains Mono',monospace; font-size:11.5px; letter-spacing:0.08em; color:var(--primary);">7 YRS SHIPPING</div>
+        <div style="position:absolute; bottom:-18px; right:-20px; padding:11px 17px; border-radius:999px; background:var(--surface); border:1px solid var(--outline); box-shadow:var(--shadow-2); font-family:'JetBrains Mono',monospace; font-size:11.5px; letter-spacing:0.08em; color:var(--primary);">3 PAPERS</div>
+       </div>
+        <div style="display:flex; justify-content:center; align-items:center; gap:12px; padding:14px 18px; border-radius:999px; border:1px solid var(--outline); background:var(--surface-1);">
+          <a href="https://github.com/anisrfd" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub" style="display:grid; place-items:center; width:44px; height:44px; border-radius:999px; border:1px solid var(--outline); background:var(--glass); color:var(--on-surface); backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px);" style-hover="background:var(--surface-2); color:var(--primary); transform:translateY(-2px)">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.55 0-.27-.01-1.17-.02-2.12-3.2.7-3.88-1.36-3.88-1.36-.52-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.03 1.76 2.69 1.25 3.35.96.1-.75.4-1.25.72-1.54-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.18-3.09-.12-.29-.51-1.46.11-3.05 0 0 .96-.31 3.15 1.18a10.9 10.9 0 0 1 5.74 0c2.19-1.49 3.15-1.18 3.15-1.18.62 1.59.23 2.76.11 3.05.73.81 1.18 1.83 1.18 3.09 0 4.41-2.69 5.38-5.25 5.67.41.35.77 1.04.77 2.1 0 1.52-.01 2.74-.01 3.11 0 .3.2.66.8.55A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"></path></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/anis-ul-islam-rafid-54s18m/" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn" style="display:grid; place-items:center; width:44px; height:44px; border-radius:999px; border:1px solid var(--outline); background:var(--glass); color:var(--on-surface); backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px);" style-hover="background:var(--surface-2); color:var(--primary); transform:translateY(-2px)">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.55V9h3.57v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.72v20.55C0 23.22.79 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.73V1.72C24 .77 23.2 0 22.22 0Z"></path></svg>
+          </a>
+          <a href="https://www.researchgate.net/profile/Anis-Ul-Islam-Rafid" target="_blank" rel="noopener" aria-label="ResearchGate" title="ResearchGate" style="display:grid; place-items:center; width:44px; height:44px; border-radius:999px; border:1px solid var(--outline); background:var(--glass); color:var(--on-surface); backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px);" style-hover="background:var(--surface-2); color:var(--primary); transform:translateY(-2px)">
+            <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><text x="12" y="16.5" text-anchor="middle" font-family="'Space Grotesk',sans-serif" font-size="12.5" font-weight="700" fill="currentColor">RG</text></svg>
+          </a>
+          <a href="https://medium.com/@au.i.rafid15" target="_blank" rel="noopener" aria-label="Medium" title="Medium" style="display:grid; place-items:center; width:44px; height:44px; border-radius:999px; border:1px solid var(--outline); background:var(--glass); color:var(--on-surface); backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px);" style-hover="background:var(--surface-2); color:var(--primary); transform:translateY(-2px)">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.54 12a6.8 6.8 0 0 1-6.77 6.82A6.8 6.8 0 0 1 0 12a6.8 6.8 0 0 1 6.77-6.82A6.8 6.8 0 0 1 13.54 12Zm7.42 0c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42Zm3.04 0c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75c.66 0 1.19 2.58 1.19 5.75Z"></path></svg>
+          </a>
+          <a href="https://leetcode.com/anisrafid/" target="_blank" rel="noopener" aria-label="LeetCode" title="LeetCode" style="display:grid; place-items:center; width:44px; height:44px; border-radius:999px; border:1px solid var(--outline); background:var(--glass); color:var(--on-surface); backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px);" style-hover="background:var(--surface-2); color:var(--primary); transform:translateY(-2px)">
+            <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><text x="12" y="16.5" text-anchor="middle" font-family="'Space Grotesk',sans-serif" font-size="12.5" font-weight="700" fill="currentColor">LC</text></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+
+  <div style="overflow:hidden; padding:24px 0; background:var(--surface-1); border-top:1px solid var(--outline); border-bottom:1px solid var(--outline);">
+    <div style="display:flex; width:max-content; animation:marquee 40s linear infinite; will-change:transform;">
+      <div style="display:flex; gap:52px; padding-right:52px;">
+        <span style="font-family:'Space Grotesk',sans-serif; font-size:15px; font-weight:500; color:var(--on-surface-dim); white-space:nowrap;">Python</span>
+        <span style="font-family:'Space Grotesk',sans-serif; font-size:15px; font-weight:500; color:var(--on-surface-dim); white-space:nowrap;">TypeScript</span>
+        <span style="font-family:'Space Grotesk',sans-serif; font-size:15px; font-weight:500; color:var(--on-surface-dim); white-space:nowrap;">C++</span>
+        <span style="font-family:'Space Grotesk',sans-serif; font-size:15px; font-weight:500; color:var(--on-surface-dim); white-space:nowrap;">TensorFlow</span>
+        <span style="font-family:'Space Grotesk',sans-serif; font-size:15px; font-weight:500; color:var(--on-surface-dim); white-space:nowrap;">OpenCV</span>
+        <span style="font-family:'Space Grotesk',sans-serif; font-size:15px; font-weight:500; color:var(--on-surface-dim); white-space:nowrap;">Google Cloud</span>
+        <span style="font-family:'Space Grotesk',sans-serif; font-size:15px; font-weight:500; color:var(--on-surface-dim); white-space:nowrap;">Docker</span>
+        <span style="font-family:'Space Grotesk',sans-serif; font-size:15px; font-weight:500; color:var(--on-surface-dim); white-space:nowrap;">Flutter</span>
+        <span style="font-family:'Space Grotesk',sans-serif; font-size:15px; font-weight:500; color:var(--on-surface-dim); white-space:nowrap;">Electron</span>
+        <span style="font-family:'Space Grotesk',sans-serif; font-size:15px; font-weight:500; color:var(--on-surface-dim); white-space:nowrap;">FastAPI</span>
+        <span style="font-family:'Space Grotesk',sans-serif; font-size:15px; font-weight:500; color:var(--on-surface-dim); white-space:nowrap;">Azure</span>
+        <span style="font-family:'Space Grotesk',sans-serif; font-size:15px; font-weight:500; color:var(--on-surface-dim); white-space:nowrap;">Redis</span>
+      </div>
+      <div style="display:flex; gap:52px; padding-right:52px;" aria-hidden="true">
+        <span style="font-family:'Space Grotesk',sans-serif; font-size:15px; font-weight:500; color:var(--on-surface-dim); white-space:nowrap;">Python</span>
+        <span style="font-family:'Space Grotesk',sans-serif; font-size:15px; font-weight:500; color:var(--on-surface-dim); white-space:nowrap;">TypeScript</span>
+        <span style="font-family:'Space Grotesk',sans-serif; font-size:15px; font-weight:500; color:var(--on-surface-dim); white-space:nowrap;">C++</span>
+        <span style="font-family:'Space Grotesk',sans-serif; font-size:15px; font-weight:500; color:var(--on-surface-dim); white-space:nowrap;">TensorFlow</span>
+        <span style="font-family:'Space Grotesk',sans-serif; font-size:15px; font-weight:500; color:var(--on-surface-dim); white-space:nowrap;">OpenCV</span>
+        <span style="font-family:'Space Grotesk',sans-serif; font-size:15px; font-weight:500; color:var(--on-surface-dim); white-space:nowrap;">Google Cloud</span>
+        <span style="font-family:'Space Grotesk',sans-serif; font-size:15px; font-weight:500; color:var(--on-surface-dim); white-space:nowrap;">Docker</span>
+        <span style="font-family:'Space Grotesk',sans-serif; font-size:15px; font-weight:500; color:var(--on-surface-dim); white-space:nowrap;">Flutter</span>
+        <span style="font-family:'Space Grotesk',sans-serif; font-size:15px; font-weight:500; color:var(--on-surface-dim); white-space:nowrap;">Electron</span>
+        <span style="font-family:'Space Grotesk',sans-serif; font-size:15px; font-weight:500; color:var(--on-surface-dim); white-space:nowrap;">FastAPI</span>
+        <span style="font-family:'Space Grotesk',sans-serif; font-size:15px; font-weight:500; color:var(--on-surface-dim); white-space:nowrap;">Azure</span>
+        <span style="font-family:'Space Grotesk',sans-serif; font-size:15px; font-weight:500; color:var(--on-surface-dim); white-space:nowrap;">Redis</span>
+      </div>
+    </div>
+  </div>
+
+  
+
+  <footer style="margin-top:calc(var(--sec-py) * 0.55); padding:22px var(--pad) 26px; border-top:1px solid var(--outline); background:var(--surface-1);">
+    <div style="max-width:var(--max); margin:0 auto; display:flex; flex-wrap:wrap; gap:20px; align-items:center; justify-content:space-between;">
+      <span style="font-size:13.5px; color:var(--on-surface-var);">© 2026 Anis-Ul-Islam Rafid</span>
+      <a href="contact.html" style="font-size:13.5px; font-weight:600;">Get in touch →</a>
+    </div>
+  </footer>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;accent&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;cyan&quot;,&quot;violet&quot;,&quot;amber&quot;,&quot;lime&quot;],&quot;default&quot;:&quot;cyan&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Theme&quot;},&quot;themeMode&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;system&quot;,&quot;dark&quot;,&quot;light&quot;],&quot;default&quot;:&quot;system&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Theme&quot;}}">
+class Component extends DCLogic {
+  async componentDidMount(){
+    this.S = await import('./site.js');
+    this.S.initPage({ hero: true, accent: this.props.accent, themeMode: this.props.themeMode, count: 1000 });
+  }
+  componentDidUpdate(){
+    if (!this.S) return;
+    this.S.applyAccent(this.props.accent);
+    this.S.initReveal();
+    this.S.initTilt();
+  }
+  renderVals(){ return {}; }
+}
+</script>
+</body>
+</html>

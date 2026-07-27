@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Research — Anis-Ul-Islam Rafid</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="theme.css" />
+<script>(function(){try{var k='rafid-portfolio-theme',t=localStorage.getItem(k);if(t!=='dark'&&t!=='light'){t=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}document.documentElement.dataset.theme=t;}catch(e){}})();</script>
+</helmet>
+
+<div style="position:relative; width:100%; min-height:100vh; background:var(--surface);">
+  <dc-import name="Nav" hint-size="100%,0px"></dc-import>
+
+  <header data-screen-label="Research header" style="position:relative; padding:var(--head-pt) var(--pad) 68px; overflow:hidden; border-bottom:1px solid var(--outline);">
+    <div style="position:absolute; inset:0; pointer-events:none; background-image:radial-gradient(var(--dot) 1px, transparent 1px); background-size:34px 34px; mask-image:linear-gradient(180deg, oklch(0 0 0 / 0.55), transparent 76%); -webkit-mask-image:linear-gradient(180deg, oklch(0 0 0 / 0.55), transparent 76%);"></div>
+    <div style="position:relative; max-width:var(--max); margin:0 auto;">
+      <div style="font-family:'JetBrains Mono',monospace; font-size:11.5px; letter-spacing:0.18em; text-transform:uppercase; color:var(--primary); margin-bottom:26px;">04 / Research</div>
+      <h1 style="font-size:clamp(38px,6.2vw,86px); line-height:1.0; font-weight:700; letter-spacing:-0.045em; max-width:14ch;">Published work.</h1>
+      <p style="font-size:clamp(16px,1.4vw,19px); line-height:1.6; color:var(--on-surface-var); max-width:620px; margin-top:28px;">Three peer-reviewed papers in journals and IEEE conferences — and the applied research threads that now run inside shipped products, from body segmentation to music removal.</p>
+      <div style="height:2px; margin-top:44px; background:linear-gradient(90deg, var(--primary), transparent); transform-origin:left; animation:ruleIn 1s cubic-bezier(.2,0,0,1) both;"></div>
+    </div>
+  </header>
+
+  <section data-screen-label="Publications" style="padding:var(--sec-py) var(--pad) 0;">
+    <div style="max-width:var(--max); margin:0 auto; display:grid; gap:16px;">
+      <sc-for list="{{ papers }}" as="p" hint-placeholder-count="3">
+        <a data-reveal="1" href="{{ p.link }}" target="_blank" rel="noopener" style="display:grid; grid-template-columns:auto 1fr auto; gap:clamp(18px,3vw,44px); align-items:start; padding:clamp(26px,2.8vw,40px); border-radius:var(--r-lg); border:1px solid var(--outline); background:var(--surface-1); color:var(--on-surface); transition:background .35s ease, border-color .35s ease;" style-hover="background:var(--surface-2); border-color:var(--outline-strong); color:var(--on-surface)">
+          <span style="font-family:'Space Grotesk',sans-serif; font-size:clamp(28px,3.2vw,44px); font-weight:700; color:var(--outline-strong); letter-spacing:-0.04em; line-height:0.9;">{{ p.num }}</span>
+          <span style="display:grid; gap:11px;">
+            <span style="font-family:'Space Grotesk',sans-serif; font-size:clamp(18px,2vw,25px); font-weight:600; letter-spacing:-0.025em; line-height:1.28;">{{ p.title }}</span>
+            <span style="font-size:14.5px; color:var(--on-surface-var); line-height:1.55;">{{ p.venue }}</span>
+            <span style="font-family:'JetBrains Mono',monospace; font-size:11.5px; color:var(--primary);">{{ p.doi }}</span>
+          </span>
+          <span style="font-family:'JetBrains Mono',monospace; font-size:17px; color:var(--on-surface-dim);">↗</span>
+        </a>
+      </sc-for>
+    </div>
+  </section>
+
+  <section data-screen-label="Research topics" style="padding:var(--sec-py) var(--pad) 0;">
+    <div style="max-width:var(--max); margin:0 auto;">
+      <div data-reveal="1" style="display:flex; align-items:center; gap:14px; margin-bottom:40px;">
+        <span style="font-family:'JetBrains Mono',monospace; font-size:11.5px; letter-spacing:0.16em; text-transform:uppercase; color:var(--primary);">Topics</span>
+        <span style="flex:1; height:1px; background:var(--outline);"></span>
+      </div>
+      <div style="display:grid; grid-template-columns:var(--cols3); gap:20px;">
+        <sc-for list="{{ topics }}" as="t" hint-placeholder-count="3">
+          <div data-reveal="1" style="display:grid; align-content:start; gap:14px; padding:32px 30px; border-radius:var(--r-lg); border:1px solid var(--outline); background:var(--surface-1);">
+            <span style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:var(--accent);">{{ t.tag }}</span>
+            <h3 style="font-size:20px; font-weight:600; letter-spacing:-0.025em; line-height:1.28;">{{ t.title }}</h3>
+            <p style="font-size:15px; line-height:1.62; color:var(--on-surface-var);">{{ t.body }}</p>
+          </div>
+        </sc-for>
+      </div>
+
+    </div>
+  </section>
+
+  <section data-screen-label="Collaborators" style="padding:var(--sec-py) var(--pad) 0;">
+    <div style="max-width:var(--max); margin:0 auto;">
+      <div data-reveal="1" style="padding:clamp(28px,3vw,44px); border-radius:var(--r-xl); border:1px solid var(--outline); background:var(--surface-1);">
+        <div style="display:grid; grid-template-columns:var(--split); gap:clamp(24px,4vw,56px); align-items:start;">
+          <h2 style="font-size:clamp(24px,2.8vw,36px); font-weight:600; letter-spacing:-0.035em; line-height:1.14;">Co-authors and supervision</h2>
+          <p style="font-size:15.5px; line-height:1.68; color:var(--on-surface-var);">The drowsiness work was written with Amit Raha Niloy and Atiqul Islam Chowdhury under Dr. Nusrat Sharmin (MIST), who also supervised the retinopathy ensemble paper with Sylvia Priata. Happy to talk about extending either line of work — particularly compact on-device models for real-time detection.</p>
+        </div>
+      </div>
+      <div data-reveal="1" style="display:flex; justify-content:center; margin-top:34px;">
+        <a href="https://www.researchgate.net/profile/Anis-Ul-Islam-Rafid" target="_blank" rel="noopener" style="display:inline-flex; align-items:center; gap:10px; padding:15px 25px; border-radius:999px; background:var(--primary); color:var(--on-primary); font-size:14.5px; font-weight:700;" style-hover="background:var(--primary-hover); color:var(--on-primary)">ResearchGate profile ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <footer style="margin-top:calc(var(--sec-py) * 0.55); padding:22px var(--pad) 26px; border-top:1px solid var(--outline); background:var(--surface-1);">
+    <div style="max-width:var(--max); margin:0 auto; display:flex; flex-wrap:wrap; gap:20px; align-items:center; justify-content:space-between;">
+      <span style="font-size:13.5px; color:var(--on-surface-var);">© 2026 Anis-Ul-Islam Rafid</span>
+      <a href="contact.html" style="font-size:13.5px; font-weight:600;">Get in touch →</a>
+    </div>
+  </footer>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;accent&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;cyan&quot;,&quot;violet&quot;,&quot;amber&quot;,&quot;lime&quot;],&quot;default&quot;:&quot;cyan&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Theme&quot;},&quot;themeMode&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;system&quot;,&quot;dark&quot;,&quot;light&quot;],&quot;default&quot;:&quot;system&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Theme&quot;}}">
+class Component extends DCLogic {
+  async componentDidMount(){
+    this.S = await import('./site.js');
+    this.S.initPage({ accent: this.props.accent, themeMode: this.props.themeMode });
+  }
+  componentDidUpdate(){
+    if (!this.S) return;
+    this.S.applyAccent(this.props.accent);
+    this.S.initReveal();
+    this.S.initTilt();
+  }
+  renderVals(){
+    return {
+      papers: [
+        { num:'01', title:'An Early Stage Diagnosis of Diabetic Retinopathy Based on Ensemble Framework', venue:'Signal, Image and Video Processing (SIViP), 2023 — with S. Priata and N. Sharmin', doi:'10.1007/s11760-023-02796-5', link:'https://doi.org/10.1007/s11760-023-02796-5' },
+        { num:'02', title:'A Deep Learning Based Approach for Real-time Driver Drowsiness Detection', venue:'5th International Conference on Electrical Engineering and Information & Communication Technology (ICEEICT), IEEE, 2021, pp. 1–5 — with A. R. Niloy, A. I. Chowdhury and N. Sharmin', doi:'10.1109/ICEEICT53905.2021.9667944', link:'https://doi.org/10.1109/ICEEICT53905.2021.9667944' },
+        { num:'03', title:'A Brief Review on Different Driver’s Drowsiness Detection Techniques', venue:'International Journal of Image, Graphics and Signal Processing (IJIGSP), Vol. 12 No. 3, pp. 41–50, 2020', doi:'10.5815/ijigsp.2020.03.05', link:'https://doi.org/10.5815/ijigsp.2020.03.05' }
+      ],
+      topics: [
+        { tag:'Computer vision', title:'Driver face & drowsiness detection in real time', body:'Eyes flutter before minds do. Landmark-based eye and head-pose analysis under real driving conditions — carried from a survey of the field to a deep-learning system fast enough to warn a driver while it still matters.' },
+        { tag:'Medical imaging', title:'Diabetic retinopathy from fundus images', body:'An ensemble framework that reads the retina for the earliest whispers of disease — validated on real patient images at a Dhaka eye hospital, not just the comfortable public benchmarks.' },
+        { tag:'Computer vision', title:'Human body segmentation & gender detection', body:'One model, two answers. A single multi-task network that carves the human figure from a cluttered frame and infers gender in the same forward pass — shared features, joint training, one inference budget instead of two. Built for real-time pipelines where every millisecond on the device is spoken for.' },
+        { tag:'Audio & LLM', title:'Music removal that keeps the voice and the world', body:'Strip the soundtrack, keep the life. A custom model that separates music from speech and natural ambience — birdsong, footsteps, wind — so what remains sounds untouched rather than filtered. Shipped inside Kahf Voice across desktop apps and a web extension, running on everyday hardware.' },
+        { tag:'Emerging', title:'Explainable AI & human–quantum interaction', body:'My focus as an AI Researcher at the UntieAI Artificial Intelligence Lab (2024–2025): making models show their reasoning, and asking how people will actually converse with quantum computers when they arrive.' }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

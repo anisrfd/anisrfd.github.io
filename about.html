@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>About — Anis-Ul-Islam Rafid</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="theme.css" />
+<script>(function(){try{var k='rafid-portfolio-theme',t=localStorage.getItem(k);if(t!=='dark'&&t!=='light'){t=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}document.documentElement.dataset.theme=t;}catch(e){}})();</script>
+</helmet>
+
+<div style="position:relative; width:100%; min-height:100vh; background:var(--surface);">
+  <dc-import name="Nav" hint-size="100%,0px"></dc-import>
+
+  <header data-screen-label="About header" style="position:relative; padding:var(--head-pt) var(--pad) 68px; overflow:hidden; border-bottom:1px solid var(--outline);">
+    <div style="position:absolute; inset:0; pointer-events:none; background-image:radial-gradient(var(--dot) 1px, transparent 1px); background-size:34px 34px; mask-image:linear-gradient(180deg, oklch(0 0 0 / 0.55), transparent 76%); -webkit-mask-image:linear-gradient(180deg, oklch(0 0 0 / 0.55), transparent 76%);"></div>
+    <div style="position:relative; max-width:var(--max); margin:0 auto;">
+      <div style="font-family:'JetBrains Mono',monospace; font-size:11.5px; letter-spacing:0.18em; text-transform:uppercase; color:var(--primary); margin-bottom:26px;">01 / About</div>
+      <h1 style="font-size:clamp(38px,6.2vw,86px); line-height:1.0; font-weight:700; letter-spacing:-0.045em; max-width:15ch;">Engineer first, researcher always.</h1>
+      <p style="font-size:clamp(16px,1.4vw,19px); line-height:1.6; color:var(--on-surface-var); max-width:620px; margin-top:28px;">Seven years between computer-vision labs and production engineering — and the same instinct in both: take the hard part yourself, then make it fast.</p>
+      <div style="height:2px; margin-top:44px; background:linear-gradient(90deg, var(--primary), transparent); transform-origin:left; animation:ruleIn 1s cubic-bezier(.2,0,0,1) both;"></div>
+    </div>
+  </header>
+
+  <section data-screen-label="Story" style="padding:var(--sec-py) var(--pad) 0;">
+    <div style="max-width:var(--max); margin:0 auto; display:grid; grid-template-columns:var(--split); gap:clamp(40px,5vw,88px); align-items:start;">
+      <div data-reveal="1" style="display:grid; gap:22px; font-size:16.5px; line-height:1.68; color:var(--on-surface-var); max-width:660px;">
+        <p style="font-size:20px; line-height:1.5; color:var(--on-surface); font-weight:500;">I started in computer-vision labs — training drowsiness detectors and retinal screening models — and never really left that mindset.</p>
+        <p>Today I ship consumer software at Kahf: a privacy-first browser, a content-safety extension, an audio filter, and a kids' video platform. All four live or die on latency and trust, which is a good discipline. When SafeGaze had to run on low-end laptops, the answer wasn't a bigger model — it was rebuilding the execution path until it was three times faster.</p>
+        <p>Before that I spent nearly five years on Rakizo, a no-code app builder, from an empty repository to a live multi-tenant platform on Google Cloud: microservices, event-driven operations, a code-generation service backed by a custom LLM, and the CI/CD to keep all of it honest. I led the local team and wrote most of the services myself.</p>
+        <p>I care about the unglamorous parts — the caching layer, the dead-letter queue, the model small enough to run on a device. And I like handing that knowledge on: since 2024 I've been teaching Python to bootcamp cohorts at HDNB.</p>
+        <div style="display:flex; flex-wrap:wrap; gap:10px; margin-top:12px;">
+          <span style="padding:9px 16px; border-radius:999px; background:var(--p-container); color:var(--on-p-container); font-size:13px; font-weight:600;">Computer Vision</span>
+          <span style="padding:9px 16px; border-radius:999px; background:var(--surface-2); color:var(--on-surface); font-size:13px; font-weight:500; border:1px solid var(--outline);">Artificial Intelligence</span>
+          <span style="padding:9px 16px; border-radius:999px; background:var(--surface-2); color:var(--on-surface); font-size:13px; font-weight:500; border:1px solid var(--outline);">LLM</span>
+          <span style="padding:9px 16px; border-radius:999px; background:var(--surface-2); color:var(--on-surface); font-size:13px; font-weight:500; border:1px solid var(--outline);">Agentic Solution &amp; Automation</span>
+          <span style="padding:9px 16px; border-radius:999px; background:var(--surface-2); color:var(--on-surface); font-size:13px; font-weight:500; border:1px solid var(--outline);">Software Engineering</span>
+          <span style="padding:9px 16px; border-radius:999px; background:var(--surface-2); color:var(--on-surface); font-size:13px; font-weight:500; border:1px solid var(--outline);">Cloud &amp; DevOps</span>
+          <span style="padding:9px 16px; border-radius:999px; background:var(--surface-2); color:var(--on-surface); font-size:13px; font-weight:500; border:1px solid var(--outline);">Teaching</span>
+        </div>
+      </div>
+
+      <div data-reveal="1" style="display:grid; gap:1px; background:var(--outline); border:1px solid var(--outline); border-radius:var(--r-md); overflow:hidden; position:sticky; top:110px;">
+        <div style="display:flex; justify-content:space-between; gap:16px; padding:18px 22px; background:var(--surface-1); font-size:13.5px;">
+          <span style="color:var(--on-surface-var);">Role</span><span style="font-weight:600; text-align:right;">Software Engineer, Kahf</span>
+        </div>
+        <div style="display:flex; justify-content:space-between; gap:16px; padding:18px 22px; background:var(--surface-1); font-size:13.5px;">
+          <span style="color:var(--on-surface-var);">Experience</span><span style="font-weight:600; text-align:right;">7 years · 6 teams</span>
+        </div>
+        <div style="display:flex; justify-content:space-between; gap:16px; padding:18px 22px; background:var(--surface-1); font-size:13.5px;">
+          <span style="color:var(--on-surface-var);">Certifications</span><span style="font-weight:600; text-align:right;">29 · Google, AWS, Coursera</span>
+        </div>
+        <div style="display:flex; justify-content:space-between; gap:16px; padding:18px 22px; background:var(--surface-1); font-size:13.5px;">
+          <span style="color:var(--on-surface-var);">Publications</span><span style="font-weight:600; text-align:right;">3 journal / conference</span>
+        </div>
+        <div style="display:flex; justify-content:space-between; gap:16px; padding:18px 22px; background:var(--surface-1); font-size:13.5px;">
+          <span style="color:var(--on-surface-var);">Citations</span><span style="font-weight:600; text-align:right;">68 on ResearchGate</span>
+        </div>
+        <div style="display:flex; justify-content:space-between; gap:16px; padding:18px 22px; background:var(--surface-1); font-size:13.5px;">
+          <span style="color:var(--on-surface-var);">Based in</span><span style="font-weight:600; text-align:right;">Dhaka, Bangladesh</span>
+        </div>
+        <div style="display:flex; justify-content:space-between; gap:16px; padding:18px 22px; background:var(--surface-1); font-size:13.5px;">
+          <span style="color:var(--on-surface-var);">Languages</span><span style="font-weight:600; text-align:right;">Bangla, English</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Education" style="padding:var(--sec-py) var(--pad) 0;">
+    <div style="max-width:var(--max); margin:0 auto;">
+      <div data-reveal="1" style="display:flex; align-items:center; gap:14px; margin-bottom:40px;">
+        <span style="font-family:'JetBrains Mono',monospace; font-size:11.5px; letter-spacing:0.16em; text-transform:uppercase; color:var(--primary);">Education</span>
+        <span style="flex:1; height:1px; background:var(--outline);"></span>
+      </div>
+      <div style="display:grid; gap:16px;">
+        <sc-for list="{{ education }}" as="e" hint-placeholder-count="3">
+          <div data-reveal="1" style="display:grid; grid-template-columns:var(--split); gap:clamp(20px,4vw,56px); padding:clamp(26px,2.8vw,40px); border-radius:var(--r-lg); border:1px solid var(--outline); background:var(--surface-1);">
+            <div>
+              <div style="display:flex; align-items:center; gap:12px; margin-bottom:16px;">
+                <span style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.12em; text-transform:uppercase; padding:6px 12px; border-radius:8px; background:var(--a-container); color:var(--accent);">{{ e.level }}</span>
+                <span style="font-family:'JetBrains Mono',monospace; font-size:11.5px; color:var(--on-surface-dim);">{{ e.period }}</span>
+              </div>
+              <h2 style="font-size:clamp(21px,2.3vw,29px); font-weight:600; letter-spacing:-0.03em; line-height:1.2;">{{ e.degree }}</h2>
+              <div style="font-size:15.5px; font-weight:600; color:var(--primary); margin-top:10px;">{{ e.institution }}</div>
+              <div style="font-size:14px; color:var(--on-surface-var); margin-top:5px;">{{ e.place }}</div>
+            </div>
+            <div style="display:grid; gap:16px; align-content:start;">
+              <div style="display:flex; align-items:baseline; gap:14px;">
+                <span style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.12em; text-transform:uppercase; color:var(--on-surface-dim); min-width:74px;">Result</span>
+                <span style="font-family:'Space Grotesk',sans-serif; font-size:19px; font-weight:700; letter-spacing:-0.02em;">{{ e.result }}</span>
+              </div>
+              <p style="font-size:15px; line-height:1.62; color:var(--on-surface-var);">{{ e.detail }}</p>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Certifications" style="padding:var(--sec-py) var(--pad) 0;">
+    <div style="max-width:var(--max); margin:0 auto;">
+      <div data-reveal="1" style="display:flex; align-items:center; gap:14px; margin-bottom:40px;">
+        <span style="font-family:'JetBrains Mono',monospace; font-size:11.5px; letter-spacing:0.16em; text-transform:uppercase; color:var(--primary);">Certifications</span>
+        <span style="flex:1; height:1px; background:var(--outline);"></span>
+      </div>
+      <div style="display:grid; gap:44px;">
+        <sc-for list="{{ certGroups }}" as="grp" hint-placeholder-count="4">
+          <div data-reveal="1" style="display:grid; gap:16px;">
+            <div style="display:flex; align-items:baseline; gap:14px;">
+              <span style="font-family:'Space Grotesk',sans-serif; font-size:24px; font-weight:700; letter-spacing:-0.03em; color:var(--primary);">{{ grp.year }}</span>
+              <span style="flex:1; height:1px; background:var(--outline);"></span>
+              <span style="font-family:'JetBrains Mono',monospace; font-size:11.5px; color:var(--on-surface-dim);">{{ grp.count }}</span>
+            </div>
+            <div style="display:grid; grid-template-columns:var(--cols2); gap:1px; background:var(--outline); border:1px solid var(--outline); border-radius:var(--r-md); overflow:hidden;">
+              <sc-for list="{{ grp.items }}" as="c" hint-placeholder-count="4">
+                <div style="display:grid; align-content:start; gap:8px; padding:17px 20px; background:var(--surface-1); grid-column:{{ c.gc }};">
+                  <span style="font-size:14.5px; font-weight:600; line-height:1.4;">{{ c.name }}</span>
+                  <span style="display:flex; flex-wrap:wrap; gap:12px; font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--on-surface-dim);">
+                    <span style="color:var(--accent);">{{ c.issuer }}</span>
+                    <span>{{ c.date }}</span>
+                    <span>{{ c.id }}</span>
+                  </span>
+                </div>
+              </sc-for>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <footer style="margin-top:calc(var(--sec-py) * 0.55); padding:22px var(--pad) 26px; border-top:1px solid var(--outline); background:var(--surface-1);">
+    <div style="max-width:var(--max); margin:0 auto; display:flex; flex-wrap:wrap; gap:20px; align-items:center; justify-content:space-between;">
+      <span style="font-size:13.5px; color:var(--on-surface-var);">© 2026 Anis-Ul-Islam Rafid</span>
+      <a href="contact.html" style="font-size:13.5px; font-weight:600;">Get in touch →</a>
+    </div>
+  </footer>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;accent&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;cyan&quot;,&quot;violet&quot;,&quot;amber&quot;,&quot;lime&quot;],&quot;default&quot;:&quot;cyan&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Theme&quot;},&quot;themeMode&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;system&quot;,&quot;dark&quot;,&quot;light&quot;],&quot;default&quot;:&quot;light&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Theme&quot;}}">
+class Component extends DCLogic {
+  async componentDidMount(){
+    this.S = await import('./site.js');
+    this.S.initPage({ accent: this.props.accent, themeMode: this.props.themeMode });
+  }
+  componentDidUpdate(){
+    if (!this.S) return;
+    this.S.applyAccent(this.props.accent);
+    this.S.initReveal();
+    this.S.initTilt();
+  }
+  renderVals(){
+    const spanOdd = gs => gs.map(g => ({ ...g, items: g.items.map((it, i) => ({ ...it, gc: (g.items.length % 2 === 1 && i === g.items.length - 1) ? '1 / -1' : 'auto' })) }));
+    return {
+      education: [
+        {
+          level: 'B.Sc.', period: '2015 — 2019',
+          degree: 'Bachelor of Science (BSc), Computer Science and Engineering',
+          institution: 'Ahsanullah University of Science and Technology',
+          place: 'Dhaka, Bangladesh', result: 'CGPA 2.91 / 4.00',
+          detail: 'Coursework weighted towards the things I still use daily: algorithms, data structures, artificial intelligence, pattern recognition, distributed databases, operating systems, web programming and compiler design. The pattern-recognition track is where the research started.'
+        },
+        {
+          level: 'H.S.C.', period: '2012 — 2014',
+          degree: 'H.S.C, Science',
+          institution: 'National Ideal College',
+          place: 'Khilgaon, Dhaka, Bangladesh', result: 'G.P.A. 5.00',
+          detail: 'Science group, with mathematics and physics as the strongest subjects — the reason CSE was the obvious next step. I still serve the college community as IT secretary of its alumni association.'
+        },
+        {
+          level: 'S.S.C.', period: '2005 — 2012',
+          degree: 'S.S.C, Science',
+          institution: 'Faizur Rahman Ideal Institute',
+          place: 'Dhaka, Bangladesh', result: 'G.P.A. 5.00',
+          detail: 'Science group, from primary school through to the certificate. Where the plan to work with computers first took shape — everything after this point followed from it.'
+        }
+      ],
+      certGroups: spanOdd([
+        { year: '2023', count: '9 certificates', items: [
+          { name: 'Encoder-Decoder Architecture', issuer: 'Google', date: 'Dec 2023', id: 'ID 6772534' },
+          { name: 'Attention Mechanism', issuer: 'Google', date: 'Dec 2023', id: 'ID 6770876' },
+          { name: 'Transformer Models and BERT Model', issuer: 'Google', date: 'Dec 2023', id: 'ID 6768202' },
+          { name: 'Agile Project Management', issuer: 'Coursera', date: 'Sep 2023', id: 'ID HJ6YE8UADYJV' },
+          { name: 'IT Security: Defense against the digital dark arts', issuer: 'Coursera', date: 'Sep 2023', id: 'ID YK7J2B9GURGL' },
+          { name: 'Generative AI Fundamentals', issuer: 'Google Cloud Skills Boost', date: 'Jul 2023', id: 'ID 4249419' },
+          { name: 'Cloud Hero Infra Skills', issuer: 'Google Cloud Skills Boost', date: 'Mar 2023', id: 'ID 3391026' },
+          { name: 'Data Science Foundations', issuer: 'Great Learning', date: 'Jan 2023', id: '' },
+          { name: 'Advanced Google Analytics', issuer: 'Google Analytics', date: 'Jan 2023', id: 'Expired Jan 2026' }
+        ]},
+        { year: '2021', count: '3 certificates', items: [
+          { name: 'Foundations: Data, Data, Everywhere', issuer: 'Coursera', date: 'Apr 2021', id: 'ID HT8H7FY5HVK6' },
+          { name: 'SQL (Basic) Certificate', issuer: 'HackerRank', date: 'Apr 2021', id: '' },
+          { name: 'Google Cloud Platform Fundamentals: Core Infrastructure', issuer: 'Coursera', date: 'Feb 2021', id: 'ID 938CDCNXSTB6' }
+        ]},
+        { year: '2020', count: '16 certificates', items: [
+          { name: 'Python (Intermediate) Certificate', issuer: 'HackerRank', date: 'Sep 2020', id: '' },
+          { name: 'Introduction to TensorFlow for Artificial Intelligence, Machine Learning, and Deep Learning', issuer: 'Coursera', date: 'Jul 2020', id: '' },
+          { name: 'Using Python to Access Web Data', issuer: 'Coursera', date: 'Jul 2020', id: 'ID GZSJJHQDUHTJ' },
+          { name: 'Engineering: Undergraduate & Masters Virtual Internship Platform (Microsoft)', issuer: 'InsideSherpa', date: 'Jul 2020', id: '' },
+          { name: 'Analyzing Big Data with SQL (with Honors)', issuer: 'Coursera', date: 'Jun 2020', id: 'ID SU8P5WWFZDDE' },
+          { name: 'RESTful API with HTTP and JavaScript', issuer: 'Coursera', date: 'May 2020', id: 'ID TV4LGRLE3MP8' },
+          { name: 'Build a Machine Learning Web App with Streamlit and Python', issuer: 'Coursera', date: 'May 2020', id: 'ID 477LQ7UBQ674' },
+          { name: 'AWS Fundamentals: Building Serverless Applications', issuer: 'Coursera', date: 'May 2020', id: 'ID ZTZT8HNE93R6' },
+          { name: 'AI for Medical Diagnosis', issuer: 'Coursera', date: 'May 2020', id: 'ID HLUP92SFG2DB' },
+          { name: 'The Data Scientist’s Toolbox', issuer: 'Coursera', date: 'May 2020', id: 'ID HDKBRZKG2XS3' },
+          { name: 'AWS Fundamentals: Going Cloud-Native', issuer: 'Coursera', date: 'May 2020', id: 'ID 9DM3QHABGSL9' },
+          { name: 'Google Cloud Platform Big Data and Machine Learning Fundamentals', issuer: 'Coursera', date: 'May 2020', id: 'ID NHLE4V5PUSN9' },
+          { name: 'Deep Learning', issuer: 'Kaggle', date: 'Apr 2020', id: '' },
+          { name: 'Python for Data Science and AI', issuer: 'Coursera', date: 'Apr 2020', id: 'ID Z5R8QNSND6QC' },
+          { name: 'Introduction to Artificial Intelligence (AI) IBM', issuer: 'Coursera', date: 'Mar 2020', id: 'ID MZW8B5LKD2ZZ' },
+          { name: 'Technical Support Fundamentals', issuer: 'Coursera', date: 'Mar 2020', id: 'ID WP2PNE7R3XGQ' }
+        ]},
+        { year: '2019', count: '1 certificate', items: [
+          { name: 'Machine Learning by Stanford University', issuer: 'Coursera', date: 'Oct 2019', id: '' }
+        ]}
+      ])
+    };
+  }
+}
+</script>
+</body>
+</html>
